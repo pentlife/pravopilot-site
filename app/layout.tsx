@@ -26,7 +26,7 @@ function Header() {
     <>
       <div className="notice">
         <div className="wrap">
-          <span><b>Бот:</b> бесплатные шаблоны документов и AI-разбор</span>
+          <span><b>Бот:</b> бесплатные образцы документов без запуска AI-анализа</span>
           <span>Не юридическая консультация · Проверка специалистом обязательна</span>
         </div>
       </div>
@@ -36,7 +36,7 @@ function Header() {
             <span className="seal">§</span><span>{site.name}</span>
           </Link>
           <nav className="links" aria-label="Основная навигация">
-            <Link href="/#work">Как работает</Link>
+            <Link href="/#free-samples">Бесплатные образцы</Link>
             <Link href="/example">Пример резюме</Link>
             <Link href="/for-people">Для людей</Link>
             <Link href="/for-business">Для бизнеса</Link>
