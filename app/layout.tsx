@@ -37,6 +37,7 @@ function Header() {
           </Link>
           <nav className="links" aria-label="Основная навигация">
             <Link href="/#work">Как работает</Link>
+            <Link href="/example">Пример brief</Link>
             <Link href="/#templates">Шаблоны</Link>
             <Link href="/#ai-analysis">AI-анализ</Link>
             <Link href="/#pricing">Тарифы</Link>
