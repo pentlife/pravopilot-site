@@ -6,7 +6,7 @@ import { legalDisclaimer, site } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Помощник адвоката — подготовка правовой ситуации в Telegram",
+    default: "Помощник адвоката — подготовка правовой ситуации в боте",
     template: "%s · Помощник адвоката",
   },
   description: site.description,
@@ -26,7 +26,7 @@ function Header() {
     <>
       <div className="notice">
         <div className="wrap">
-          <span><b>Telegram-бот:</b> бесплатные шаблоны документов и предварительный AI-анализ</span>
+          <span><b>Бот:</b> бесплатные шаблоны документов и предварительный предварительный разбор</span>
           <span>Не юридическая консультация · Проверка специалистом обязательна</span>
         </div>
       </div>
@@ -37,13 +37,13 @@ function Header() {
           </Link>
           <nav className="links" aria-label="Основная навигация">
             <Link href="/#work">Как работает</Link>
-            <Link href="/example">Пример brief</Link>
+            <Link href="/example">Пример резюме</Link>
             <Link href="/#templates">Шаблоны</Link>
-            <Link href="/#ai-analysis">AI-анализ</Link>
+            <Link href="/#analysis">Разбор документа</Link>
             <Link href="/#pricing">Тарифы</Link>
-            <Link href="/#faq">FAQ</Link>
+            <Link href="/#faq">Вопросы</Link>
           </nav>
-          <a className="btn primary" href={site.botUrl}>Открыть в Telegram <span className="arrow">→</span></a>
+          <a className="btn primary" href={site.botUrl}>Открыть бота <span className="arrow">→</span></a>
           <span className="mobile" aria-hidden="true">☰</span>
         </div>
       </header>
@@ -60,9 +60,9 @@ function Footer() {
           <p className="legal">«{site.name}» — автоматизированный сервис предварительной подготовки материалов. {legalDisclaimer}</p>
         </div>
         <div className="foot-links">
-          <div><b>Сайт</b><Link href="/#work">Как работает</Link><Link href="/#templates">Шаблоны</Link><Link href="/#ai-analysis">AI-анализ</Link><Link href="/#pricing">Тарифы</Link><Link href="/#faq">FAQ</Link></div>
+          <div><b>Сайт</b><Link href="/#work">Как работает</Link><Link href="/#templates">Шаблоны</Link><Link href="/#analysis">Разбор документа</Link><Link href="/#pricing">Тарифы</Link><Link href="/#faq">Вопросы</Link></div>
           <div><b>Документы</b><Link href="/privacy">Политика ПДн</Link><Link href="/consent">Согласие</Link><Link href="/terms">Пользовательское соглашение</Link><Link href="/limitations">Ограничения сервиса</Link></div>
-          <div><b>Контакты</b><a href={site.botUrl}>Telegram-бот</a><a href={site.supportUrl}>Поддержка</a><Link href="/privacy#delete">Удаление данных</Link></div>
+          <div><b>Контакты</b><a href={site.botUrl}>Бот</a><a href={site.supportUrl}>Поддержка</a><Link href="/privacy#delete">Удаление данных</Link></div>
         </div>
       </div>
     </footer>

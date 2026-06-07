@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { legalDisclaimer, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Пример DOCX-brief для юриста",
+  title: "Пример структурированного резюме для юриста",
   description:
-    "Пример результата: как Telegram-бот превращает описание правовой ситуации в структурированный brief для консультации с юристом.",
+    "Пример результата: как бот превращает описание правовой ситуации в структурированное резюме для консультации с юристом.",
 };
 
 const timeline = [
@@ -38,7 +38,7 @@ export default function ExamplePage() {
           <div className="section-title example-title">
             <div>
               <div className="kicker">Пример результата</div>
-              <h1>Как выглядит brief, который удобно передать юристу</h1>
+              <h1>Как выглядит резюме, которое удобно передать юристу</h1>
             </div>
             <p>
               Это демонстрационный пример: бот не решает спор и не даёт юридическое заключение. Он помогает
@@ -57,26 +57,26 @@ export default function ExamplePage() {
             <article>
               <span>Результат бота</span>
               <p>
-                Короткий DOCX-brief: хронология, платежи, документы, зоны внимания и вопросы специалисту.
+                Короткое структурированное резюме: хронология, платежи, документы, зоны внимания и вопросы специалисту.
                 Его можно скачать, дополнить и показать на консультации.
               </p>
             </article>
           </div>
 
-          <div className="brief-preview">
+          <div className="summary-preview">
             <aside className="result-card light-card">
-              <h3>Что попадает в brief</h3>
+              <h3>Что попадает в резюме</h3>
               {documents.map((item) => (
                 <div className="check" key={item}>{item}</div>
               ))}
             </aside>
-            <article className="brief">
+            <article className="summary">
               <h3>Фрагмент структуры</h3>
-              <div className="brief-line"><b>Ситуация</b><span>Спор с исполнителем по срокам и качеству ремонта.</span></div>
-              <div className="brief-line"><b>Цель</b><span>Подготовить материалы для консультации и предварительного текста претензии.</span></div>
-              <div className="brief-line"><b>Деньги</b><span>Оплата 70 000 ₽, способ подтверждения — банковские переводы.</span></div>
-              <div className="brief-line"><b>Зоны внимания</b><span>Сроки, доказательства недостатков, условия договора, порядок фиксации претензий.</span></div>
-              <div className="brief-line"><b>Оговорка</b><span>{legalDisclaimer}</span></div>
+              <div className="summary-line"><b>Ситуация</b><span>Спор с исполнителем по срокам и качеству ремонта.</span></div>
+              <div className="summary-line"><b>Цель</b><span>Подготовить материалы для консультации и предварительного текста претензии.</span></div>
+              <div className="summary-line"><b>Деньги</b><span>Оплата 70 000 ₽, способ подтверждения — банковские переводы.</span></div>
+              <div className="summary-line"><b>Зоны внимания</b><span>Сроки, доказательства недостатков, условия договора, порядок фиксации претензий.</span></div>
+              <div className="summary-line"><b>Оговорка</b><span>{legalDisclaimer}</span></div>
             </article>
           </div>
 
@@ -84,7 +84,7 @@ export default function ExamplePage() {
             <section>
               <h2>Хронология</h2>
               {timeline.map(([date, text]) => (
-                <div className="brief-line" key={date}><b>{date}</b><span>{text}</span></div>
+                <div className="summary-line" key={date}><b>{date}</b><span>{text}</span></div>
               ))}
             </section>
             <section>
@@ -98,10 +98,10 @@ export default function ExamplePage() {
           <div className="final example-final">
             <div className="wrap inner-final">
               <div>
-                <h2>Хотите собрать такой brief по своей ситуации?</h2>
-                <p>Откройте Telegram-бота, опишите проблему обычными словами и проверьте результат со специалистом.</p>
+                <h2>Хотите собрать такое резюме по своей ситуации?</h2>
+                <p>Откройте бота, опишите проблему обычными словами и проверьте результат со специалистом.</p>
               </div>
-              <a className="btn light" href={site.botUrl}>Собрать brief в Telegram <span className="arrow">→</span></a>
+              <a className="btn light" href={site.botUrl}>Собрать резюме в боте <span className="arrow">→</span></a>
             </div>
           </div>
         </div>
