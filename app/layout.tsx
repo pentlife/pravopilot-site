@@ -38,10 +38,12 @@ function Header() {
           <nav className="links" aria-label="Основная навигация">
             <Link href="/#work">Как работает</Link>
             <Link href="/example">Пример резюме</Link>
-            <Link href="/#templates">Шаблоны</Link>
+            <Link href="/for-people">Для людей</Link>
+            <Link href="/for-business">Для бизнеса</Link>
+            <Link href="/for-lawyers">Юристам</Link>
             <Link href="/#analysis">Разбор документа</Link>
             <Link href="/#pricing">Тарифы</Link>
-            <Link href="/#faq">Вопросы</Link>
+            <Link href="/#questions">Вопросы</Link>
           </nav>
           <a className="btn primary" href={site.botUrl}>Открыть бота <span className="arrow">→</span></a>
           <span className="mobile" aria-hidden="true">☰</span>
@@ -60,7 +62,7 @@ function Footer() {
           <p className="legal">«{site.name}» — AI-сервис предварительной подготовки материалов. {legalDisclaimer}</p>
         </div>
         <div className="foot-links">
-          <div><b>Сайт</b><Link href="/#work">Как работает</Link><Link href="/#templates">Шаблоны</Link><Link href="/#analysis">Разбор документа</Link><Link href="/#pricing">Тарифы</Link><Link href="/#faq">Вопросы</Link></div>
+          <div><b>Сайт</b><Link href="/#work">Как работает</Link><Link href="/for-people">Для людей</Link><Link href="/for-business">Для бизнеса</Link><Link href="/for-lawyers">Юристам</Link><Link href="/#pricing">Тарифы</Link></div>
           <div><b>Документы</b><Link href="/privacy">Политика ПДн</Link><Link href="/consent">Согласие</Link><Link href="/terms">Пользовательское соглашение</Link><Link href="/limitations">Ограничения сервиса</Link></div>
           <div><b>Контакты</b><a href={site.botUrl}>Бот</a><a href={site.supportUrl}>Поддержка</a><Link href="/privacy#delete">Удаление данных</Link></div>
         </div>
