@@ -22,9 +22,9 @@ const features = [
   ["🔍", "AI-анализ документов", "Бот разбирает текст документа с точки зрения действующего законодательства и подсвечивает зоны внимания для проверки специалистом."],
 ];
 
-const templates = ["претензия продавцу или исполнителю", "заявление работодателю", "жалоба в управляющую компанию", "запрос/заявление в банк", "расписка и долговая претензия", "базовые семейные заявления", "документы по закупкам 44-ФЗ"];
+const templates = ["претензия продавцу или исполнителю", "заявление работодателю", "жалоба в управляющую компанию", "запрос/заявление в банк", "расписка и долговая претензия", "базовые семейные заявления", "документы по закупкам 44-ФЗ", "персональные данные и РКН"];
 const freeBotItems = ["каталог типовых образцов", "быстрый подбор формы по описанию ситуации", "скачивание текстового файла", "переход к расширенному режиму только по желанию"];
-const topics = ["ЖКХ|жалобы, перерасчёт|/scenarios/zhkh", "Труд|зарплата, увольнение|/scenarios/labor", "Долги|расписки, претензии|/scenarios/debts", "Договоры|условия, акты|/scenarios/contracts", "Потребители|товары, услуги|/scenarios", "Семья|алименты, развод|/scenarios", "Банки|списания, кредиты|/scenarios", "44-ФЗ|жалобы, разъяснения, контракты|/scenarios"];
+const topics = ["ЖКХ|жалобы, перерасчёт|/scenarios/zhkh", "Труд|зарплата, увольнение|/scenarios/labor", "Долги|расписки, претензии|/scenarios/debts", "Договоры|условия, акты|/scenarios/contracts", "Потребители|товары, услуги|/scenarios", "Семья|алименты, развод|/scenarios", "Банки|списания, кредиты|/scenarios", "44-ФЗ|жалобы, разъяснения|/scenarios", "152-ФЗ|персональные данные, РКН|/scenarios"];
 const checks = ["предварительное резюме ситуации", "хронология событий", "зоны внимания для проверки специалистом", "важные даты и суммы", "перечень документов", "вопросы адвокату", "структурированное резюме для юриста"];
 
 const summaryItems = ["Факты без юридических терминов", "Даты, суммы и участники", "Документы, которые стоит приложить", "Вопросы для консультации", "Зоны внимания для проверки специалистом"];
@@ -32,7 +32,58 @@ const summaryItems = ["Факты без юридических терминов
 export default function Home() {
   return (
     <main>
-      <section className="hero"><div className="wrap hero-grid"><div><div className="eyebrow">структурированное резюме для консультации</div><h1>Подготовьте материалы к консультации с юристом за 10–15 минут</h1><p className="lead">Бот соберёт факты, даты, суммы, документы и вопросы в понятное структурированное резюме. Это не юридическая консультация — это подготовка, которую удобно передать специалисту.</p><div className="hero-bullets">{summaryItems.map(x=><span key={x}>{x}</span>)}</div><div className="cta"><a className="btn primary" href={site.botUrl}>Собрать резюме в боте <span className="arrow">→</span></a><a className="btn ghost" href="/example">Посмотреть пример резюме</a></div><div className="disclaimer">Предварительный разбор не заменяет адвоката: он структурирует факты, зоны внимания и вопросы, чтобы дальнейшая работа специалиста была быстрее и точнее. {legalDisclaimer}</div></div><aside className="case-card" aria-label="Пример результата"><div className="case-top"><span>Бот</span><span>Шаблон + предварительный разбор</span></div><div className="case-body"><div className="folder"><p className="folder-title">Бесплатные шаблоны документов</p><small>Претензии, заявления, жалобы, договорные формы</small></div><div className="chat-line bot">Выберите действие: получить шаблон, задать правовой вопрос или загрузить документ на предварительный анализ.</div><div className="chat-line user">Хочу проверить договор услуг и понять, какие пункты рискованные.</div><div className="doc"><h3>Предварительный разбор</h3><div className="doc-row"><b>Риски</b><span>неясные сроки, ответственность, порядок возврата</span></div><div className="doc-row"><b>Нормы</b><span>ориентиры по действующему законодательству</span></div><div className="doc-row"><b>Адвокату</b><span>вопросы и материалы для профессиональной проверки</span></div></div></div></aside></div></section>
+      {/* Modern Hero Section */}
+      <section className="hero-modern">
+        <div className="hero-modern-grid">
+          <div className="hero-modern-content">
+            <h1>AI-помощник по правовой информации<br/>Шаблоны и анализ за минуты</h1>
+            <p className="lead">50+ бесплатных шаблонов документов, предварительный AI-анализ ваших ситуаций и подготовка структурированных материалов для юриста — всё в Telegram-боте.</p>
+            
+            <div className="hero-modern-bullets">
+              <span>50+ шаблонов</span>
+              <span>2 бесплатных анализа/неделю</span>
+              <span>Подписка 3000 ₽/мес</span>
+              <span>Без автосписания</span>
+            </div>
+            
+            <div className="hero-modern-cta">
+              <a className="btn-lime" href={site.botUrl}>Попробовать бесплатно →</a>
+              <a className="btn-outline" href="/#templates">Посмотреть шаблоны</a>
+            </div>
+            
+            <div className="hero-modern-avatars">
+              <div className="avatar-group">
+                <div className="avatar">👤</div>
+                <div className="avatar">👤</div>
+                <div className="avatar">👤</div>
+                <div className="avatar avatar-more">+</div>
+              </div>
+              <span>Уже пользуются юристы и адвокаты</span>
+            </div>
+            
+            <div className="hero-modern-disclaimer">
+              Сервис предоставляет предварительную правовую информацию и не является юридической консультацией. Для получения квалифицированной помощи обратитесь к специалисту.
+            </div>
+          </div>
+          
+          <div className="hero-modern-image">
+            <div style={{
+              width: '100%', 
+              height: '480px', 
+              background: 'linear-gradient(135deg, #a8a39b 0%, #9a958d 100%)',
+              borderRadius: '16px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 24px 60px rgba(0,0,0,.2)',
+              color: 'rgba(255,255,255,0.6)',
+              fontSize: '14px'
+            }}>
+              [Изображение: человек за ноутбуком]
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="example-strip" id="example"><div className="wrap"><div className="section-title"><div><div className="kicker">Пример результата</div><h2>Из хаотичного описания — в структуру для юриста</h2></div><p>Показываем, как бытовой пересказ превращается в короткое резюме: факты, документы, вопросы и зоны внимания для проверки специалистом.</p></div><div className="before-after"><article><span>До</span><p>«Оплатил ремонт, сроки сорвали, часть работ сделана плохо, договор где-то в переписке. Не понимаю, что писать и какие доказательства нужны».</p></article><article><span>После</span><ul><li>хронология событий и платежей;</li><li>список документов и скриншотов;</li><li>вопросы юристу перед претензией;</li><li>предварительный текстовый шаблон для проверки.</li></ul></article></div><div className="cta"><a className="btn primary" href="/example">Открыть полный пример</a><a className="btn ghost" href={site.botUrl}>Повторить в боте</a></div></div></section>
 
@@ -56,7 +107,7 @@ export default function Home() {
 
       <section className="limits"><div className="wrap"><div className="section-title"><div><div className="kicker">Ограничения</div><h2>Честные границы — часть доверия</h2></div><p>AI-инструмент полезен как подготовка, но не является адвокатом, юридическим заключением или гарантией результата.</p></div><div className="limit-grid"><div className="limit good"><h3>Сервис помогает</h3><ul><li>получить бесплатный шаблон документа</li><li>структурировать ситуацию</li><li>предварительно разобрать документ</li><li>подготовить вопросы адвокату</li><li>сформировать текстовый черновик</li></ul></div><div className="limit bad"><h3>Сервис не делает</h3><ul><li>не заменяет юриста или адвоката</li><li>не даёт юридическое заключение</li><li>не гарантирует результат</li><li>не контролирует процессуальные сроки</li><li>не обеспечивает адвокатскую тайну</li></ul></div></div></div></section>
 
-      <section id="pricing"><div className="wrap"><div className="section-title"><div><div className="kicker">Тарифы</div><h2>Бесплатный старт и платная подготовка материалов</h2></div><p>Базовые шаблоны доступны бесплатно. Платные сценарии нужны, когда требуется более подробный AI-разбор ситуации, документа или подготовка текстового черновика.</p></div><div className="pricing"><div className="price"><h3>Шаблоны</h3><div className="amount">0 ₽</div><ul><li>базовые формы документов</li><li>категории по жизненным ситуациям</li><li>стартовая основа для заполнения</li><li>доступ в боте</li></ul><a className="btn ghost" href={site.botUrl}>Получить</a></div><div className="price"><h3>Старт</h3><div className="amount">990 ₽</div><ul><li>структура ситуации</li><li>список документов</li><li>вопросы юристу</li><li>текстовое резюме</li></ul><a className="btn ghost" href={site.botUrl}>Начать</a></div><div className="price featured"><h3>AI-анализ документа</h3><div className="amount">2 490 ₽</div><ul><li>предварительная структура условий</li><li>зоны внимания для проверки специалистом</li><li>вопросы адвокату</li><li>структурированное резюме анализа</li></ul><a className="btn primary" href={site.botUrl}>Разобрать документ</a></div><div className="price"><h3>С проверкой</h3><div className="amount">4 990–7 990 ₽</div><ul><li>подготовка ботом</li><li>проверка юристом-партнёром</li><li>комментарии по доработке</li></ul><a className="btn ghost" href={site.botUrl}>Узнать</a></div></div></div></section>
+      <section id="pricing"><div className="wrap"><div className="section-title"><div><div className="kicker">Тарифы</div><h2>Бесплатный старт и подписка без автосписания</h2></div><p>Базовые шаблоны доступны бесплатно. Для регулярного использования AI-анализа — подписка с ручной активацией без автосписания.</p></div><div className="pricing"><div className="price"><h3>Шаблоны</h3><div className="amount">0 ₽</div><ul><li>базовые формы документов</li><li>категории по жизненным ситуациям</li><li>стартовая основа для заполнения</li><li>доступ в боте без ограничений</li></ul><a className="btn ghost" href={site.botUrl}>Получить</a></div><div className="price"><h3>Старт</h3><div className="amount">2 анализа<br/><small style={{fontSize:'16px',color:'var(--muted)'}}>в неделю бесплатно</small></div><ul><li>структура ситуации</li><li>список документов</li><li>вопросы юристу</li><li>текстовое резюме</li></ul><a className="btn ghost" href={site.botUrl}>Начать</a></div><div className="price featured"><h3>Подписка</h3><div className="amount">3 000 ₽<span style={{fontSize:'18px',color:'var(--muted)'}}>/мес</span></div><ul><li><b>безлимитный AI-анализ</b></li><li>ручная активация администратором</li><li>без автоматического списания</li><li>все шаблоны включены</li><li>приоритетная обработка</li></ul><a className="btn primary" href={site.botUrl}>Оформить заявку →</a><p style={{fontSize:'12px',color:'var(--muted)',marginTop:'12px',textAlign:'center'}}>Напишите в боте: «Хочу подписку»</p></div><div className="price"><h3>С проверкой юриста</h3><div className="amount">4 990–7 990 ₽</div><ul><li>подготовка ботом</li><li>проверка юристом-партнёром</li><li>комментарии по доработке</li></ul><a className="btn ghost" href={site.botUrl}>Узнать</a></div></div></div></section>
 
       <section id="questions"><div className="wrap"><div className="section-title"><div><div className="kicker">Вопросы</div><h2>Ответы, которые снижают риск ложных ожиданий</h2></div><p>Мы прямо разделяем бесплатные шаблоны, AI-ориентир и профессиональную юридическую помощь.</p></div><div className="questions-grid"><div className="q"><b>Шаблоны действительно бесплатные?</b><p>Да. Базовые шаблоны правовых документов доступны в боте бесплатно. Их можно использовать как стартовую форму, но важные документы лучше проверить у специалиста.</p></div><div className="q"><b>Это юридическая консультация?</b><p>Нет. Сервис формирует предварительную справку и материалы для подготовки. Он не заменяет адвоката или юриста и не даёт юридическое заключение.</p></div><div className="q"><b>Что даёт AI-анализ документа?</b><p>Он помогает выделить зоны внимания для проверки специалистом, спорные условия, важные факты и вопросы для адвоката с учётом действующего законодательства.</p></div><div className="q"><b>Зачем это адвокату?</b><p>Адвокат получает структурированное резюме: факты, документы, зоны внимания и вопросы. Это облегчает первичный разбор и помогает быстрее перейти к профессиональной стратегии.</p></div><div className="q"><b>Можно использовать результат сразу?</b><p>Для простых бытовых задач — как ориентир. Для отправки, подписания, подачи в суд или спора со значимыми последствиями результат должен проверить специалист.</p></div><div className="q"><b>Если срок истекает завтра?</b><p>Обратитесь к юристу напрямую. Сервис не гарантирует выявление и контроль процессуальных сроков.</p></div></div></div></section>
 
