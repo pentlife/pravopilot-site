@@ -26,8 +26,8 @@ function Header() {
     <>
       <div className="notice">
         <div className="wrap">
-          <span><b>Бот:</b> бесплатные образцы документов без запуска AI-анализа</span>
-          <span>Не юридическая консультация · Проверка специалистом обязательна</span>
+          <span><b>Бот:</b> бесплатные образцы документов без запуска расширенного разбора</span>
+          <span>Не заменяет специалиста · Проверка специалистом обязательна</span>
         </div>
       </div>
       <header>
@@ -60,7 +60,7 @@ function Footer() {
       <div className="wrap foot">
         <div>
           <Link className="brand" href="/"><span className="seal">§</span><span>{site.name}</span></Link>
-          <p className="legal">«{site.name}» — AI-сервис предварительной подготовки материалов. {legalDisclaimer}</p>
+          <p className="legal">«{site.name}» — сервис предварительной подготовки материалов. {legalDisclaimer}</p>
         </div>
         <div className="foot-links">
           <div><b>Сайт</b><Link href="/#work">Как работает</Link><Link href="/for-people">Для людей</Link><Link href="/for-business">Для бизнеса</Link><Link href="/for-lawyers">Юристам</Link><Link href="/scenarios">Сценарии</Link><Link href="/#pricing">Тарифы</Link></div>
