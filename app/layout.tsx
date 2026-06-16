@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "ru_RU",
     type: "website",
-    images: [{ url: "/images/hero-man-laptop-bg.png", width: 1200, height: 900, alt: "Помощник адвоката — подготовка правовых материалов" }],
+    images: [{ url: "/images/hero-legal-assistant-bg.png", width: 1672, height: 941, alt: "Помощник адвоката — подготовка правовых материалов" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Помощник адвоката — AI-подготовка правовых материалов",
     description: site.description,
-    images: ["/images/hero-man-laptop-bg.png"],
+    images: ["/images/hero-legal-assistant-bg.png"],
   },
   robots: { index: true, follow: true },
 };
