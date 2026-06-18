@@ -81,6 +81,11 @@ export default function Home() {
               Сервис готовит предварительные материалы для обсуждения со специалистом. Не является юридической консультацией, не заменяет адвоката и не даёт юридическое заключение.
             </div>
           </div>
+          <div className="hero-motion" aria-hidden="true">
+            <span className="hero-orbit hero-orbit-one">§</span>
+            <span className="hero-orbit hero-orbit-two">✓</span>
+            <span className="hero-orbit hero-orbit-three">≡</span>
+          </div>
           
         </div>
       </section>
