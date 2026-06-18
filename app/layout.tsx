@@ -44,7 +44,7 @@ function Header() {
             <span className="seal">§</span><span>{site.name}</span>
           </Link>
           <nav className="links" aria-label="Основная навигация">
-            <Link href="/#free-samples">Бесплатные образцы</Link>
+            <Link href="/#templates">Бесплатные образцы</Link>
             <Link href="/example">Пример резюме</Link>
             <Link href="/for-people">Для людей</Link>
             <Link href="/for-business">Для бизнеса</Link>
@@ -54,8 +54,22 @@ function Header() {
             <Link href="/#pricing">Тарифы</Link>
             <Link href="/#questions">Вопросы</Link>
           </nav>
-          <a className="btn primary" href={site.botUrl}>Открыть бота <span className="arrow">→</span></a>
-          <span className="mobile" aria-hidden="true">☰</span>
+          <a className="btn primary desktop-cta" href={site.botUrl}>Открыть бота <span className="arrow">→</span></a>
+          <details className="mobile-menu">
+            <summary aria-label="Открыть меню">☰</summary>
+            <div className="mobile-panel">
+              <Link href="/#templates">Бесплатные образцы</Link>
+              <Link href="/example">Пример резюме</Link>
+              <Link href="/for-people">Для людей</Link>
+              <Link href="/for-business">Для бизнеса</Link>
+              <Link href="/for-lawyers">Юристам</Link>
+              <Link href="/scenarios">Сценарии</Link>
+              <Link href="/#analysis">Разбор документа</Link>
+              <Link href="/#pricing">Тарифы</Link>
+              <Link href="/#questions">Вопросы</Link>
+              <a className="btn primary" href={site.botUrl}>Открыть бота <span className="arrow">→</span></a>
+            </div>
+          </details>
         </div>
       </header>
     </>
