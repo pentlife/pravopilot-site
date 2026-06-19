@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { legalDisclaimer, site } from "@/lib/site";
+import { CookieBanner } from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -121,6 +122,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         {children}
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
