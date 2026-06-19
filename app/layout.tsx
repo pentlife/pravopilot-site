@@ -47,7 +47,7 @@ function Header() {
       <header>
         <div className="wrap nav">
           <Link className="brand" href="/" aria-label="Помощник адвоката — на главную">
-            <img className="brand-logo" src="/brand/pravopilot-shield-logo.svg" alt="Помощник адвоката" width="252" height="64" />
+            <img className="brand-logo" src="/brand/pravopilot-shield-logo.svg" alt="Помощник адвоката" width="296" height="64" />
           </Link>
           <nav className="links" aria-label="Основная навигация">
             <Link href="/#templates">Бесплатные образцы</Link>
