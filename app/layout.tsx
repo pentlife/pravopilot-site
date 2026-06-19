@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     images: ["/images/hero-legal-assistant-bg.png"],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 function Header() {
@@ -41,8 +46,8 @@ function Header() {
       </div>
       <header>
         <div className="wrap nav">
-          <Link className="brand" href="/">
-            <span className="seal">§</span><span>{site.name}</span>
+          <Link className="brand" href="/" aria-label="Помощник адвоката — на главную">
+            <img className="brand-logo" src="/brand/pravopilot-shield-logo.svg" alt="Помощник адвоката" width="252" height="64" />
           </Link>
           <nav className="links" aria-label="Основная навигация">
             <Link href="/#templates">Бесплатные образцы</Link>
@@ -82,7 +87,7 @@ function Footer() {
     <footer>
       <div className="wrap foot">
         <div>
-          <Link className="brand" href="/"><span className="seal">§</span><span>{site.name}</span></Link>
+          <Link className="brand" href="/" aria-label="Помощник адвоката — на главную"><img className="brand-logo footer-brand-logo" src="/brand/pravopilot-shield-logo.svg" alt="Помощник адвоката" width="252" height="64" /></Link>
           <p className="legal">«{site.name}» — сервис предварительной подготовки материалов. {legalDisclaimer}</p>
         </div>
         <div className="foot-links">

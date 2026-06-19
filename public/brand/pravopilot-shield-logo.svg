@@ -1,0 +1,20 @@
+<svg width="252" height="64" viewBox="0 0 252 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Помощник адвоката — логотип</title>
+  <desc id="desc">Бордовый щит с золотым контуром и символом параграфа рядом с названием сервиса</desc>
+  <defs>
+    <linearGradient id="shieldFill" x1="8" y1="6" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7A2B40"/>
+      <stop offset="1" stop-color="#632334"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="10" y1="6" x2="57" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D1B16F"/>
+      <stop offset="1" stop-color="#A78343"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 5.5C39.6 10.5 47.2 12.7 56 13.3V32.2C56 45.7 47.9 55 32 61C16.1 55 8 45.7 8 32.2V13.3C16.8 12.7 24.4 10.5 32 5.5Z" fill="url(#shieldFill)"/>
+  <path d="M32 5.5C39.6 10.5 47.2 12.7 56 13.3V32.2C56 45.7 47.9 55 32 61C16.1 55 8 45.7 8 32.2V13.3C16.8 12.7 24.4 10.5 32 5.5Z" stroke="url(#goldStroke)" stroke-width="2"/>
+  <path d="M32 13.5C37.9 17.1 43.5 18.8 50 19.4V32.1C50 42.2 44 49.4 32 54C20 49.4 14 42.2 14 32.1V19.4C20.5 18.8 26.1 17.1 32 13.5Z" fill="#FFFDF8" fill-opacity="0.08"/>
+  <text x="32" y="43" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#FFFDF8">§</text>
+  <text x="76" y="29" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="0.1" fill="#201B18">Помощник адвоката</text>
+  <text x="77" y="48" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12" font-weight="500" letter-spacing="0.4" fill="#6D625B">правовая подготовка в боте</text>
+</svg>

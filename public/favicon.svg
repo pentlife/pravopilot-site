@@ -1,0 +1,8 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Помощник адвоката — фавикон</title>
+  <desc id="desc">Бордовый щит с золотым контуром и символом параграфа</desc>
+  <rect width="64" height="64" rx="14" fill="#FBF8F2"/>
+  <path d="M32 5.5C39.6 10.5 47.2 12.7 56 13.3V32.2C56 45.7 47.9 55 32 61C16.1 55 8 45.7 8 32.2V13.3C16.8 12.7 24.4 10.5 32 5.5Z" fill="#632334" stroke="#A78343" stroke-width="2"/>
+  <path d="M32 13.5C37.9 17.1 43.5 18.8 50 19.4V32.1C50 42.2 44 49.4 32 54C20 49.4 14 42.2 14 32.1V19.4C20.5 18.8 26.1 17.1 32 13.5Z" fill="#FFFDF8" fill-opacity="0.08"/>
+  <text x="32" y="43" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#FFFDF8">§</text>
+</svg>
