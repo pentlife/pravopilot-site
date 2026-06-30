@@ -95,7 +95,7 @@ function Footer() {
         <div className="foot-links">
           <div><b>Сайт</b><Link href="/#work">Как работает</Link><Link href="/guide">Как пользоваться</Link><Link href="/for-people">Для людей</Link><Link href="/for-business">Для бизнеса</Link><Link href="/for-lawyers">Юристам</Link><Link href="/scenarios">Сценарии</Link><Link href="/#pricing">Тарифы</Link></div>
           <div><b>Документы</b><Link href="/privacy">Политика ПДн</Link><Link href="/consent">Согласие</Link><Link href="/terms">Пользовательское соглашение</Link><Link href="/limitations">Ограничения сервиса</Link></div>
-          <div><b>Контакты</b><a href={site.botUrl}>Бот</a><a href={site.supportUrl}>Поддержка</a><Link href="/privacy#delete">Удаление данных</Link></div>
+          <div><b>Контакты</b><a href={site.botUrl}>Telegram-бот</a><a href={site.supportUrl}>Поддержка: {site.supportEmail}</a><Link href="/privacy#delete">Удаление данных</Link></div>
         </div>
       </div>
     </footer>
