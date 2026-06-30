@@ -84,6 +84,17 @@ function Header() {
   );
 }
 
+function StickyCta() {
+  return (
+    <div className="sticky-cta" aria-label="Быстрые действия">
+      <div className="sticky-cta__bar">
+        <a className="sticky-cta__primary" href={site.botUrl}>Подготовить в Telegram</a>
+        <a className="sticky-cta__secondary" href="/#templates">Бесплатные образцы</a>
+      </div>
+    </div>
+  );
+}
+
 function Footer() {
   return (
     <footer>
@@ -129,6 +140,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         {children}
         <Footer />
+        <StickyCta />
         <CookieBanner />
       </body>
     </html>
