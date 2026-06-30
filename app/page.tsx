@@ -34,6 +34,14 @@ const situations = [
   ["Есть договор или акт, но непонятны риски", "AI-сводка выделит зоны внимания и вопросы, которые стоит проверить с юристом или адвокатом."],
 ];
 
+const scenarioPaths = [
+  ["Возврат денег", "Выберите «Шаблоны документов»", "сроки покупки, чек, договор, переписку и фото недостатков", "Черновик претензии или список вопросов специалисту"],
+  ["Задержка выплаты", "Выберите «Правовой вопрос»", "трудовой договор, расчётные листки, даты и суммы долга", "Список фактов и вопросов для консультации"],
+  ["Долг контрагента", "Выберите «Шаблоны документов»", "договор, акты, счета, переписку и сумму задолженности", "Основа претензии и перечень доказательств"],
+  ["Жалоба", "Выберите «Шаблоны документов»", "адрес объекта, номер обращения, ответ организации и фотографии", "Черновик жалобы или план обращения"],
+  ["Проверка договора", "Выберите «Разбор документа»", "файл договора или акта без лишних персональных данных", "Сводка условий и зон внимания для проверки"],
+];
+
 const pricingChoices = [
   ["Бесплатные шаблоны", "Если нужен типовой стартовый документ: претензия, заявление, жалоба или базовый договорный текст."],
   ["2 бесплатных AI-разбора", "Если хотите попробовать предварительную справку по ситуации или документу без подписки."],
@@ -101,7 +109,7 @@ export default function Home() {
 
       <section><div className="wrap"><div className="section-title"><div><div className="kicker">Главное</div><h2>Не только черновик, а понятный первый шаг</h2></div><p>Пользователь может бесплатно взять шаблон, получить предварительную справку по правовому вопросу или загрузить документ для разбора. Результат помогает подготовиться к разговору с адвокатом, но не подменяет его заключение.</p></div><div className="pain-grid">{pains.map(([n,t,p])=><div className="pain" key={n}><div className="num">{n}</div><h3>{t}</h3><p>{p}</p></div>)}</div></div></section>
 
-      <section id="situations"><div className="wrap"><div className="section-title"><div><div className="kicker">Ситуации</div><h2>Узнайте свой сценарий и начните с безопасного шага</h2></div><p>Выберите типовую ситуацию: бот предложит шаблон, предварительную AI-справку или список вопросов для специалиста. Это подготовка материалов, а не юридическое заключение.</p></div><div className="audiences">{situations.map(([title,text])=><article className="aud" key={title}><div className="mini">Сценарий</div><h3>{title}</h3><p className="muted">{text}</p><a className="text-link" href={site.botUrl}>Открыть в боте →</a></article>)}</div></div></section>
+      <section id="situations"><div className="wrap"><div className="section-title"><div><div className="kicker">Ситуации</div><h2>Узнайте свой сценарий и начните с безопасного шага</h2></div><p>Выберите типовую ситуацию: бот предложит шаблон, предварительную AI-справку или список вопросов для специалиста. Это подготовка материалов, а не юридическое заключение.</p></div><div className="audiences">{situations.map(([title,text])=><article className="aud" key={title}><div className="mini">Сценарий</div><h3>{title}</h3><p className="muted">{text}</p><a className="text-link" href="#scenario-paths">Посмотреть путь в боте →</a></article>)}</div><div className="scenario-paths" id="scenario-paths"><div className="section-title compact"><div><div className="kicker">Что нажать в боте</div><h2>Путь от ситуации к результату</h2></div><p>Короткая подсказка снижает растерянность: что выбрать, какие материалы подготовить и какой безопасный результат ожидать.</p></div>{scenarioPaths.map(([title, action, prepare, result])=><article className="scenario-path" key={title}><h3>{title}</h3><dl><div><dt>Что нажать в боте</dt><dd>{action}</dd></div><div><dt>что подготовить</dt><dd>{prepare}</dd></div><div><dt>какой результат получите</dt><dd>{result}</dd></div></dl><a className="btn ghost" href={site.botUrl}>Открыть бота</a></article>)}</div></div></section>
 
       <section className="process" id="features"><div className="wrap"><div className="section-title"><div><div className="kicker">Возможности</div><h2>Три сценария в одном боте</h2></div><p>Сначала — бесплатные формы и подготовка материалов. Затем, если вопрос сложный, структурированную сводку можно показать адвокату для профессиональной оценки.</p></div><div className="audiences">{features.map(([icon,title,text])=><article className="aud" key={title}><div className="mini">{icon}</div><h3>{title}</h3><p className="muted">{text}</p><a className="btn ghost" href={site.botUrl}>Открыть бота</a></article>)}</div></div></section>
 
